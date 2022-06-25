@@ -16,4 +16,5 @@ int main()
     scanf("%d", &n1);
     printf("Dime el segundo numero a sumar: ");
     scanf("%d", &n2);
+    printf("La suma total da igual a: %d", suma(n1, n2));
 }
