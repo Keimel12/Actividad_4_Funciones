@@ -3,11 +3,17 @@
 que la utilice */
 
 int suma(int x, int y){
-    sum = x + y;
+    int sum = x + y;
     return sum;
 }
 
 int main()
 {
+    int n1;
+    int n2;
 
+    printf("Dime el primer numero a sumar: ");
+    scanf("%d", &n1);
+    printf("Dime el segundo numero a sumar: ");
+    scanf("%d", &n2);
 }
