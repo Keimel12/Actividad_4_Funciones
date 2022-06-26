@@ -37,13 +37,12 @@ int main()
         scanf("%[^\n]", &cadena2);
         getchar();
 
-
         printf("\nEl resultado de concatenar fue: %s", concatenar(total, cadena1, cadena2));
         printf("\nLa vuelta a la concatenacion es: %s", vuelta(cadena1));
 
-        printf("\nQuieres continuar concatenando?: ");
+        printf("\nQuieres continuar concatenando? Presione <s> para continuar: ");
         scanf("%c", &n);
-
+        system("cls");
     } while(n == 's' || n == 'S');
 
     printf("Programa finalizado");
