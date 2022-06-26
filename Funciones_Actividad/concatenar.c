@@ -15,20 +15,21 @@ int main()
     char n;
 
     printf("Desea concatenar una cadena de caracteres? Presione <s> para continuar: ");
-    scanf("%c", n);
+    scanf("%c", &n);
     do
     {
         printf("Escriba la primera cadena de caracteres (maximo 30 palabras): ");
         getchar();
-        scanf(%"[^\n]", cadena1);
+        scanf(%"[^\n]", &cadena1);
         fflush(stdin);
 
         printf("Escriba la segunda cadena de caracteres (maximo 30 palabras): ");
         getchar();
-        scanf(%"[^\n]", cadena2);
+        scanf(%"[^\n]", &cadena2);
         fflush(stdin);
 
-        
+        printf("\nQuieres continuar concatenando?: ");
+        scanf("%c", &n);
     } while(n == 's' || n == 'S');
 
     printf("Programa finalizado");
