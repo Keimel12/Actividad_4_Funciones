@@ -2,8 +2,8 @@
 /* Ejercicio 2. Escribir un programa que reciba como argumento un conjunto de
 números. Calcular la media mediante una función */
 
-float media(int a, int b){
-    int prom;
+float media(float a, int b){
+    float prom;
     prom = a/b;
     return prom;
 }
@@ -16,13 +16,13 @@ int main()
     int sum = 0;
 
     printf("Dime la cantidad de numeros: ");
-    scanf("%d", n);
-    for(i = 1; i <= n; i++)
+    scanf("%d", cant);
+    for(i = 1; i <= cant; i++)
     {
         printf("%d- Dime el numero: ", i);
-        scanf("%f", cant);
-        sum += cant;
+        scanf("%f", n);
+        sum += n;
     }
-    printf("El resultado de la media aritemtica es; ", media(sum, i));
+    printf("El resultado de la media aritemtica es; %.1f", media(sum, i));
     return 0;
 }
