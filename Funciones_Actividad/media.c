@@ -9,5 +9,8 @@ float (int a, int b){
 
 int main()
 {
-
+    int n;
+    int i;
+    int cant;
+    int sum = 0;
 }
