@@ -7,6 +7,13 @@ como argumentos. El programa deberá concatenarlas y dar la vuelta a la cadena
 resultante. La cadena que almacene la concatenación de los argumentos debe
 utilizar la memoria justa y necesaria. */
 
+char *concatenar(char *total, char *cadena1, char *cadena2){
+    strcpy(total, cadena1);
+    strcat(cadena1, " ");
+    strcat(cadena1, cadena2);
+    return cadena1;
+}
+
 int main()
 {
     char total[62];
@@ -20,16 +27,19 @@ int main()
     {
         printf("Escriba la primera cadena de caracteres (maximo 30 palabras): ");
         getchar();
-        scanf(%"[^\n]", &cadena1);
+        scanf("%[^\n]", &cadena1);
         fflush(stdin);
 
         printf("Escriba la segunda cadena de caracteres (maximo 30 palabras): ");
         getchar();
-        scanf(%"[^\n]", &cadena2);
+        scanf("%[^\n]", &cadena2);
         fflush(stdin);
+
+        printf("\nEl resultado de concatenar fue: %s", concatenar(total, cadena1, cadena2));
 
         printf("\nQuieres continuar concatenando?: ");
         scanf("%c", &n);
+
     } while(n == 's' || n == 'S');
 
     printf("Programa finalizado");
