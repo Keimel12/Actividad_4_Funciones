@@ -13,4 +13,12 @@ int main()
     char cadena1[31];
     char cadena2[31];
     char n;
+    printf("Desea concatenar una cadena de caracteres? Presione <s> para continuar: ");
+    scanf("%c", n);
+    do
+    {
+
+    } while(n == 's' || n == 'S');
+    printf("Programa finalizado");
+    return 0;
 }
