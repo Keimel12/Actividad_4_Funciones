@@ -3,6 +3,7 @@
 números. Calcular la media mediante una función */
 
 float media(int a, int b){
+    int prom;
     prom = a/b;
     return prom;
 }
