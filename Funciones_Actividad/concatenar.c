@@ -9,11 +9,8 @@ utilizar la memoria justa y necesaria. */
 
 int main()
 {
-    char cadena1[51]:
-    char cadena2[51]:
-
-    printf("Primera cadena de caracteres: ");
-    scanf("%[^\n]", cadena1);
-    printf("Segunda cadena de caracteres: ");
-    scanf("%[^\n]", cadena2);
+    char total[62];
+    char cadena1[31];
+    char cadena2[31];
+    char n;
 }
