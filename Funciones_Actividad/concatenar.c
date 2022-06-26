@@ -9,33 +9,37 @@ utilizar la memoria justa y necesaria. */
 
 char *concatenar(char *total, char *cadena1, char *cadena2){
     strcpy(total, cadena1);
-    strcat(cadena1, " ");
+    strcat(cadena1, "");
     strcat(cadena1, cadena2);
     return cadena1;
 }
 
+char *vuelta(char *cadena1){
+    return strrev(cadena1);
+}
+
 int main()
 {
-    char total[62];
+    char total[63];
     char cadena1[31];
-    char cadena2[31];
+    char cadena2[32];
     char n;
 
-    printf("Desea concatenar una cadena de caracteres? Presione <s> para continuar: ");
-    scanf("%c", &n);
     do
     {
         printf("Escriba la primera cadena de caracteres (maximo 30 palabras): ");
-        getchar();
-        scanf("%[^\n]", &cadena1);
         fflush(stdin);
+        scanf("%[^\n]", &cadena1);
+        getchar();
 
         printf("Escriba la segunda cadena de caracteres (maximo 30 palabras): ");
-        getchar();
-        scanf("%[^\n]", &cadena2);
         fflush(stdin);
+        scanf("%[^\n]", &cadena2);
+        getchar();
+
 
         printf("\nEl resultado de concatenar fue: %s", concatenar(total, cadena1, cadena2));
+        printf("\nLa vuelta a la concatenacion es: %s", vuelta(cadena1));
 
         printf("\nQuieres continuar concatenando?: ");
         scanf("%c", &n);
