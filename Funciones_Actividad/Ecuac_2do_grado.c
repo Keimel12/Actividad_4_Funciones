@@ -14,11 +14,18 @@ float var1(float a, float b, float c) // Parametros
     float cont = pow(b, 2) - 4*a*c;
 
     if ((a == 0) || (cont < 0)){
-        printf("\nNo se puede resolver");
+        printf("\nNo se puede resolver (Y): ");
         return 0;
     }
+        if(cont == 0){
+            printf("\nSolo posee una raiz real: ");
+            x1 = (-b) / (2*a);
+            return x1;
+        }
+
 
     if(cont > 0){
+        printf("\nLas raiz real x1 es:");
         x1 = (-b + sqrt(cont)) / (2*a);
         return x1;
     }
@@ -30,11 +37,18 @@ float var2(float a, float b, float c) // Parametros
     float cont = pow(b, 2) - (4*a*c);
 
     if ((a == 0) || (cont < 0)){
-        printf("\nNo se puede resolver");
+        printf("\nNo se puede resolver: ");
         return 0;
     }
 
+        if(cont == 0){
+            printf("\nSolo posee una raiz real: ");
+            x2 = (-b) / (2*a);
+            return x2;
+        }
+
     if(cont > 0){
+        printf("La raiz real de x2 es: ");
         x2 = ((-b) - sqrt(cont)) / (2*a);
         return x2;
     }
@@ -58,8 +72,8 @@ int main()
     printf("Dime el valor que sera asignado a <c>: ");
     scanf("%f", &c);
 
-    printf("\nEl resultado de x1 es: %.2f", var1(a, b, c));
-    printf("\nEl resultado de x2 es: %.2f", var2(a, b, c));
+    printf(" %.1f \n", var1(a, b, c));
+    printf(" %.1f \n", var2(a, b, c));
 
     getchar();
     printf("\nQuieres continuar? Presione <s> para continuar: ");
